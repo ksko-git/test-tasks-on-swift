@@ -1,7 +1,7 @@
 import Foundation
 
 let V : Int // Скорость
-var T : Int // Время
+let T : Int // Время
 
 // Начало обработки элементов командной строки
 if CommandLine.arguments.count < 3 {    
@@ -16,8 +16,8 @@ if CommandLine.arguments.count < 3 {
 print("Скорость: \(V) км/ч") 
 print("Время: \(T) ч")
 
-var remainder = V * T % 109 // Остаток от деления расстояния на 109
-var solution = (remainder + 109) % 109
+let remainder = V * T % 109 // Остаток от деления расстояния на 109
+let solution = (remainder + 109) % 109
 
 print("Решение: \(solution)")
 
