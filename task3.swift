@@ -4,7 +4,7 @@ let elementsCount : Int // Количество элементов массив�
 var CommandLineArgumentsArray = [Int]() // Массив элементов 
 
 // Начало обработки элементов командной строки
-if CommandLine.arguments.count < 2 {    
+if CommandLine.arguments.count < 3 {    
     elementsCount = 8 
     CommandLineArgumentsArray = [4, 3, 5, 2, 5, 1, 3, 5]
 } else {
