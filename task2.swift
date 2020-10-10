@@ -1,7 +1,7 @@
 import Foundation
 
-let V : Int // Скорость
-let T : Int // Время
+var V : Int // Скорость
+var T : Int // Время
 
 // Начало обработки элементов командной строки
 if CommandLine.arguments.count < 3 {    
@@ -10,6 +10,16 @@ if CommandLine.arguments.count < 3 {
 } else {
     V = Int(CommandLine.arguments[1])!
     T = Int(CommandLine.arguments[2])!
+}
+
+print("Введите скорость:")
+let _V = readLine()!
+print("Введите время:")
+let _T = readLine()!
+
+if !_V.isEmpty || !_T.isEmpty {
+    V = Int(_V)!
+    T = Int(_T)!
 }
 // Конец обработки элементов командной строки
 

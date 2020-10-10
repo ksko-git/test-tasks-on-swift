@@ -2,8 +2,8 @@ import Foundation
 
 var N : Int 
 var M : Int
-let X : Int 
-let Y : Int
+var X : Int 
+var Y : Int
 
 // Начало обработки элементов командной строки
 if CommandLine.arguments.count < 5 {    
@@ -17,6 +17,22 @@ if CommandLine.arguments.count < 5 {
     X = Int(CommandLine.arguments[3])!   
     Y = Int(CommandLine.arguments[4])!   
 }
+
+print("Введите N:")
+let _N = readLine()!
+print("Введите M:")
+let _M = readLine()!
+print("Введите X:")
+let _X = readLine()!
+print("Введите Y:")
+let _Y = readLine()!
+
+if !_N.isEmpty || !_M.isEmpty || !_X.isEmpty || !_Y.isEmpty {
+    N = Int(_N)!
+    M = Int(_M)!
+    X = Int(_X)!
+    Y = Int(_Y)!
+}
 // Конец обработки элементов командной строки
 
 if N > M {
@@ -27,18 +43,18 @@ if N > M {
 }
 // Проерка X
 if N - X > X && M - Y > X && Y > X {
-    print(X)
+    print("Ответ: \(X)")
 }
 // Проверка N - X
 else if X > N - X && M - Y > N - X && Y > N - X {
-    print(N - X)
+    print("Ответ: \(N - X)")
 }
 // Проверка M - Y
 else if X > M - Y && Y > M - Y && N - X > M - Y {
-    print(M - Y)
+    print("Ответ: \(M - Y)")
 }
 else {
-    print(Y)
+    print("Ответ: \(Y)")
 }
 
 

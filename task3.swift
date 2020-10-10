@@ -1,6 +1,6 @@
 import Foundation
 
-let elementsCount : Int // Количество элементов массива
+var elementsCount : Int // Количество элементов массива
 var CommandLineArgumentsArray = [Int]() // Массив элементов 
 
 // Начало обработки элементов командной строки
@@ -14,6 +14,22 @@ if CommandLine.arguments.count < 3 {
         // + приведение к int 
         CommandLineArgumentsArray.append(Int(CommandLine.arguments[CommandLineArgument - 1])!)         
     }    
+}
+
+print("Введите количество элементов массива:")
+let _elementsCount = readLine()!
+print("Введите массив:")
+let _ArgumentsArray = readLine()!
+
+var _argumentsArray = _ArgumentsArray.components(separatedBy: " ")
+
+if !_elementsCount.isEmpty || !_ArgumentsArray.isEmpty {
+    elementsCount = Int(_elementsCount)!    
+    CommandLineArgumentsArray.removeAll() // Очищаем массив от заготовленных чисел
+    for arg in 1...elementsCount { 
+        // + приведение к int 
+        CommandLineArgumentsArray.append(Int(_argumentsArray[arg - 1])!)         
+    }  
 }
 // Конец обработки элементов командной строки
 
